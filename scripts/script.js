@@ -21,22 +21,36 @@ avocado.game = function () {
     $('button').on('click', function (event) {
         //stops button's default behaviour
         event.preventDefault();
+
+        //variable that gets button's class
+        let itemClass = $(this).attr("class");
+
+        // if the reset button is clicked it resets all values that make the game run
+        if (itemClass == "reset") {
+            avocado.level.shynessLevel = 0;
+            avocado.level.friendshipLevel = 0;
+            avocado.level.affectionLevel = 0;
+            avocado.level.freshnessLevel = 0;
+            avocado.counterLevel = 0;
+            $(".game-image").attr("src", `assets/console-images/initial-state/avocado.jpg`);
+        };
         
         //run the game if counter < 5
-        if (avocado.counterLevel < 5) {
+        if (avocado.counterLevel < 5) {         
 
-            //#1 Updates the avocado.level correspondent key and image
+            //updates that depend on the game's button classes
+            if (itemClass != "reset") { 
+            //Updates key counter
+            avocado.counterLevel = avocado.counterLevel + 1;
 
-            //gets button's class (same as avocado.level items)
-            let itemClass = $(this).attr("class");
-
-            //updates level key
-            avocado.level[itemClass] = avocado.level[itemClass] + 1; 
+            //updates level key correspondant to the button
+            avocado.level[itemClass] = avocado.level[itemClass] + 1;             
             
-            //update image
+            //updates image correspondant to the button
             $(".game-image").attr("src", `assets/console-images/actions/${itemClass}.jpg`);
+            }; 
 
-            //updates image alt
+            //updates image alt correspondant to the button
             if ($(this).attr("class") == "shynessLevel") {
                 $(".game-image").attr("alt", "Shy blushing half avocado.");
             } else if ($(this).attr("class") == "friendshipLevel") {
@@ -47,10 +61,8 @@ avocado.game = function () {
                 $(".game-image").attr("alt", "Freezing Avocado half with a scarf.");
             };
 
-            //#2 Updates key counter
-            avocado.counterLevel = avocado.counterLevel + 1; 
             //updates page counter            
-            $('.game-counter-number').text(avocado.counterLevel);      
+            $('.game-counter-number').text(avocado.counterLevel);                  
         }; 
         
         //show results if counter = 5
