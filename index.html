@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE THAT -->
+    <title>NeoPits - Virtual Petvocado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="keywords" content="Sophie, blog, travel, photography">
+    <meta name="description" content="It's all about Sophie">
+    <meta property="og:title" content="It's All About Sophie - Home">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.sophie.com">
+    <meta property="og:image" content="http://www.sophie.com/miniature.jpg">
+    <meta property="og:site_name" content="It's All About Sophie">
+    <meta property="og:description" content="It's All About Sophie - Home">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://www.sophie.com">
+    <meta name="twitter:title" content="It's All About Sophie">
+    <meta name="twitter:description" content="It's All About Sophie - Home">
+    <!-- ICONS -->
+    <link type="image/png" href="assets/favicon.png" rel="icon">
+    <link rel="apple-touch-icon" href="assets/appleIcon.png">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     
@@ -16,18 +34,20 @@
         </div>
 
         <div class="game-display">
-            <p>Day <span class="game-counter">0</span></p>
+            <p class="game-counter-display">Day <span class="game-counter-number">0</span></p>
 
             <div class="game-image-container">
-                <img src="" alt="" class="game-image">
+                <img src="assets/console-images/initial-state/avocado.jpg" alt="An avocado half with smiley face" class="game-image">
             </div>
         </div>
 
         <div class="game-buttons">
+            <!-- Jenny said I could use camelCase for these button classes as my JS code depends on these classes matching key-values pairs in an object. The same apply for some images inside my assets folder, as they all use the same variable.  -->
             <button class="shynessLevel">shynessLevel</button>
             <button class="friendshipLevel">friendshipLevel</button>
-            <button class="affinityLevel">affinityLevel</button>
+            <button class="affectionLevel">affectionLevel</button>
             <button class="freshnessLevel">freshnessLevel</button>
+            <button class="refresh">Start new game</button>
         </div>
     </div>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>

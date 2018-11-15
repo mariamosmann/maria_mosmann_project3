@@ -9,7 +9,7 @@ avocado.init = function () {
 avocado.level = {
     shynessLevel: 0,
     friendshipLevel: 0,
-    affinityLevel: 0,
+    affectionLevel: 0,
     freshnessLevel: 0
 }
 
@@ -30,32 +30,62 @@ avocado.game = function () {
             //gets button's class (same as avocado.level items)
             let itemClass = $(this).attr("class");
 
-            //updates level
-            avocado.level[itemClass] = avocado.level[itemClass] + 1;          
+            //updates level key
+            avocado.level[itemClass] = avocado.level[itemClass] + 1; 
+            
+            //update image
+            $(".game-image").attr("src", `assets/console-images/actions/${itemClass}.jpg`);
 
-            //#2 Update counters
-            avocado.counterLevel = avocado.counterLevel + 1;             
-            $('.game-counter').text(avocado.counterLevel);      
+            //updates image alt
+            if ($(this).attr("class") == "shynessLevel") {
+                $(".game-image").attr("alt", "Shy blushing half avocado.");
+            } else if ($(this).attr("class") == "friendshipLevel") {
+                $(".game-image").attr("alt", "Happy avocado half hanging out with some evil looking bananas.");
+            } else if ($(this).attr("class") == "affectionLevel") {
+                $(".game-image").attr("alt", "Avocado half with hearts flying around his head.");
+            } else if ($(this).attr("class") == "freshnessLevel") {
+                $(".game-image").attr("alt", "Freezing Avocado half with a scarf.");
+            };
+
+            //#2 Updates key counter
+            avocado.counterLevel = avocado.counterLevel + 1; 
+            //updates page counter            
+            $('.game-counter-number').text(avocado.counterLevel);      
         }; 
         
         //show results if counter = 5
         if (avocado.counterLevel == 5) {
             //check for results
-            if (avocado.level.shynessLevel == 1 && avocado.level.friendshipLevel == 0 && avocado.level.affinityLevel == 3 && avocado.level.freshnessLevel == 1) {
+            if (avocado.level.shynessLevel == 1 && avocado.level.friendshipLevel == 0 && avocado.level.affectionLevel == 3 && avocado.level.freshnessLevel == 1) {
                 //display Holy Guacamole result
-                console.log("Oh hai");
-            } else if (avocado.level.shynessLevel > 4) {
+
+                //updates image and alt attr
+                $(".game-image").attr("src", `assets/console-images/results/holy-guacamole.jpg`);
+                $(".game-image").attr("alt", "The holy grail of avocado concoctions: a sparkly Holy Guacamole with a satisfied expression, surrounded by angels.");
+            } else if (avocado.level.shynessLevel == 5) {
                 //display Shyvocado result
-                console.log("Hallo");
+
+                //updates image and alt attr
+                $(".game-image").attr("src", `assets/console-images/results/shyvocado.jpg`);
+                $(".game-image").attr("alt", "A very shy blushing whole avocado.");
             } else if (avocado.level.friendshipLevel > 0) {
                 //display Badvocado result
-                console.log("Sup");
-            } else if (avocado.level.freshnessLevel >= 2 && avocado.level.shynessLevel >= 1 ) {
+
+                //updates image and alt attr
+                $(".game-image").attr("src", `assets/console-images/results/badvocado.jpg`);
+                $(".game-image").attr("alt", "A rotten avocado half with an evil face.");
+            } else if (avocado.level.freshnessLevel >= 3 || avocado.level.shynessLevel >= 3 ) {
                 //display Guacamole!== NOT result
-                console.log("Holla");
+
+                //updates image and alt attr
+                $(".game-image").attr("src", `assets/console-images/results/guacamole-not.jpg`);
+                $(".game-image").attr("alt", "An avocado half with a sad face.");
             } else {
                 //display Guacamole result
-                console.log("Heeeeey");
+
+                //updates image and alt attr
+                $(".game-image").attr("src", `assets/console-images/results/guacamole.jpg`);
+                $(".game-image").attr("alt", "Guacamole with a happy face.");
             }             
         };
     });
