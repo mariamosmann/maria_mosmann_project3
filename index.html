@@ -26,32 +26,59 @@
 </head>
 <body>
     
-    <div class="game">
-        <h1 class="game-title">Guacamole Game</h1>
+    <!-- Game starts -->
+    <div class="game-wrapper">
 
-        <div class="game-instructions">
-            <p>Instructions</p>
-        </div>
+        <!-- Game header start -->
+        <header class="game-header">
+            <h1 class="game-title">NeoPits</h1>
 
-        <div class="game-display">
-            <p class="game-counter-display">Day <span class="game-counter-number">0</span></p>
+            <h2 class="game-subtitle">Virtual Petvocado</h2>
 
-            <div class="game-image-container">
-                <img src="assets/console-images/initial-state/avocado.jpg" alt="An avocado half with smiley face" class="game-image">
+            <button class="reset">Reset Game</button>
+        </header>
+        <!-- Game header end -->
+
+        <!-- Game instructions start -->
+        <section class="game-instructions">
+            <h3 class="game-instructions-heading">Game Instructions</h3>
+
+            <p class="game-instructions-text">You have a taco party in 5 days! Yay! You're bringing guacamole, but you bought the One Green Avocado to Unrippe Them All. Use the buttons to give it some TLC and see if you'll fulfill your guacamole ambitions or end up with a bad, badvocado. There are five possible results, can you find them all?</p>
+        </section>
+        <!-- Game instructions end -->           
+        
+        <!-- Game container start -->
+        <div class="game-container">
+
+            <!-- Game screen start -->
+            <div class="game-screen">
+                <p class="game-text-display">Day <span class="game-counter-number">0</span></p>
+
+                <div class="game-image-container">
+                    <img src="assets/console-images/initial-state/avocado.jpg" alt="An avocado half with smiley face" class="game-image">
+                </div>
             </div>
-        </div>
+            <!-- Game screen end -->
 
-        <div class="game-buttons">
-            <!-- Jenny said I could use camelCase for these button classes as my JS code depends on these classes matching key-values pairs in an object. The same apply for some images inside my assets folder, as they all use the same variable.  -->
-            <button class="shynessLevel">shynessLevel</button>
-            <button class="friendshipLevel">friendshipLevel</button>
-            <button class="affectionLevel">affectionLevel</button>
-            <button class="freshnessLevel">freshnessLevel</button>
-            <button class="reset">Start new game</button>
+            <!-- Game buttons start -->
+            <div class="game-buttons">
+                <!-- Jenny said I could use camelCase for these button classes as my JS code depends on these classes matching key-value pairs in an object. The same apply for some images inside my assets folder, as they all use the same variable.  -->
+                <button class="shynessLevel">Stare at the avocado</button>
+                <button class="friendshipLevel">Go on a playdate with some friendly bananas</button>
+                <button class="affectionLevel">Whisper sweet nothings to the avocado</button>
+                <button class="freshnessLevel">Nap time in the fridge</button>                
+            </div>
+            <!-- Game buttons end -->
         </div>
+        <!-- Game container end -->
+
     </div>
+    <!-- Game ends -->
+
+    <!-- Script tags start -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
     <script src="scripts/script.js"></script>
+    <!-- Script tags end -->
 </body>
 </html>

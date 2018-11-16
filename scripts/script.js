@@ -33,6 +33,9 @@ avocado.game = function () {
             avocado.level.freshnessLevel = 0;
             avocado.counterLevel = 0;
             $(".game-image").attr("src", `assets/console-images/initial-state/avocado.jpg`);
+            $(".game-image").attr("alt", "An avocado half with smiley face");
+            $('.game-text-display').text("Day ").append(`<span class="game-counter-number">0</span>`);
+            $(".game-screen-result").attr("class", "game-screen");            
         };
         
         //run the game if counter < 5
@@ -67,9 +70,15 @@ avocado.game = function () {
         
         //show results if counter = 5
         if (avocado.counterLevel == 5) {
+            //change div class (so I can style it as needed)
+            $(".game-screen").attr("class", "game-screen-result");
+
             //check for results
             if (avocado.level.shynessLevel == 1 && avocado.level.friendshipLevel == 0 && avocado.level.affectionLevel == 3 && avocado.level.freshnessLevel == 1) {
-                //display Holy Guacamole result
+                //display Holy Guacamole result                
+
+                //updates counter text to result text
+                $('.game-text-display').text("Hey! I'm a text now! Hooray!");  
 
                 //updates image and alt attr
                 $(".game-image").attr("src", `assets/console-images/results/holy-guacamole.jpg`);
@@ -77,11 +86,17 @@ avocado.game = function () {
             } else if (avocado.level.shynessLevel == 5) {
                 //display Shyvocado result
 
+                //updates counter text to result text
+                $('.game-text-display').text("Hey! I'm a text now! Hooray!"); 
+
                 //updates image and alt attr
                 $(".game-image").attr("src", `assets/console-images/results/shyvocado.jpg`);
                 $(".game-image").attr("alt", "A very shy blushing whole avocado.");
             } else if (avocado.level.friendshipLevel > 0) {
                 //display Badvocado result
+
+                //updates counter text to result text
+                $('.game-text-display').text("Hey! I'm a text now! Hooray!"); 
 
                 //updates image and alt attr
                 $(".game-image").attr("src", `assets/console-images/results/badvocado.jpg`);
@@ -89,11 +104,17 @@ avocado.game = function () {
             } else if (avocado.level.freshnessLevel >= 3 || avocado.level.shynessLevel >= 3 ) {
                 //display Guacamole!== NOT result
 
+                //updates counter text to result text
+                $('.game-text-display').text("Hey! I'm a text now! Hooray!"); 
+
                 //updates image and alt attr
                 $(".game-image").attr("src", `assets/console-images/results/guacamole-not.jpg`);
                 $(".game-image").attr("alt", "An avocado half with a sad face.");
             } else {
                 //display Guacamole result
+
+                //updates counter text to result text
+                $('.game-text-display').text("Hey! I'm a text now! Hooray!"); 
 
                 //updates image and alt attr
                 $(".game-image").attr("src", `assets/console-images/results/guacamole.jpg`);
