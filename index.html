@@ -6,22 +6,10 @@
     <title>NeoPits - Virtual Petvocado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Sophie, blog, travel, photography">
-    <meta name="description" content="It's all about Sophie">
-    <meta property="og:title" content="It's All About Sophie - Home">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.sophie.com">
-    <meta property="og:image" content="http://www.sophie.com/miniature.jpg">
-    <meta property="og:site_name" content="It's All About Sophie">
-    <meta property="og:description" content="It's All About Sophie - Home">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://www.sophie.com">
-    <meta name="twitter:title" content="It's All About Sophie">
-    <meta name="twitter:description" content="It's All About Sophie - Home">
-    <!-- ICONS -->
+    <meta name="keywords" content="virtual pet, avocado, guacamole, game, neopits, petvocado">
+    <meta name="description" content="NeoPits - Virtual Petvocado">
     <link type="image/png" href="assets/favicon.png" rel="icon">
-    <link rel="apple-touch-icon" href="assets/appleIcon.png">
-    <!-- STYLESHEETS -->
+    <link rel="apple-touch-icon" href="assets/apple-icon.png">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -35,7 +23,8 @@
 
             <h2 class="game-subtitle">Virtual Petvocado</h2>
 
-            <button class="reset">Reset Game</button>
+            <label for="reset" class="visuallyhidden">Reset Game</label>
+            <button class="reset" id="reset">Reset Game</button>
         </header>
         <!-- Game header end -->
 
@@ -43,19 +32,21 @@
         <section class="game-instructions">
             <h3 class="game-instructions-heading">Game Instructions</h3>
 
-            <p class="game-instructions-text">You have a taco party in 5 days! Yay! You're bringing guacamole, but you bought the One Green Avocado to Unrippe Them All. Use the buttons to give it some TLC and see if you'll fulfill your guacamole ambitions or end up with a bad, badvocado. There are five possible results, can you find them all?</p>
+            <p class="game-instructions-text">You have a taco party in 5 days and you'll bring the guacamole! Yay! ...But... the market only had the One Green Avocado to Unripe Them All! What are we going to do?!!!</p>
+            <p class="game-instructions-text">Don't fret! We have JavaScript!</p>
+            <p class="game-instructions-text">Use the buttons to give it some TLC and make it ripe. You have 5 days, 1 action per day. Will you fulfill your guacamole ambitions or will you end up with a bad, badvocado? There are five possible results!</p>
         </section>
         <!-- Game instructions end -->           
         
         <!-- Game container start -->
-        <div class="game-container">
+        <section class="game-container">
 
             <!-- Game screen start -->
             <div class="game-screen">
                 <p class="game-text-display">Day <span class="game-counter-number">0</span></p>
 
                 <div class="game-image-container">
-                    <img src="assets/console-images/initial-state/avocado.jpg" alt="An avocado half with smiley face" class="game-image">
+                    <img src="assets/console-images/initial-state/avocado.png" alt="An avocado half with smiley face" class="game-image">
                 </div>
             </div>
             <!-- Game screen end -->
@@ -63,13 +54,20 @@
             <!-- Game buttons start -->
             <div class="game-buttons">
                 <!-- Jenny said I could use camelCase for these button classes as my JS code depends on these classes matching key-value pairs in an object. The same apply for some images inside my assets folder, as they all use the same variable.  -->
-                <button class="shynessLevel">Stare at the avocado</button>
-                <button class="friendshipLevel">Go on a playdate with some friendly bananas</button>
-                <button class="affectionLevel">Whisper sweet nothings to the avocado</button>
-                <button class="freshnessLevel">Nap time in the fridge</button>                
+                <label for="shyness-level" class="visuallyhidden">Stare at the avocado</label>
+                <button class="shynessLevel" id="shyness-level">Stare at the avocado</button>
+
+                <label for="friendship-level" class="visuallyhidden">Go on a playdate with some friendly bananas</label>
+                <button class="friendshipLevel" id="friendship-level">Go on a playdate with some friendly bananas</button>
+
+                <label for="affection-level" class="visuallyhidden">Whisper sweet nothings to the avocado</label>
+                <button class="affectionLevel" id="affection-level">Whisper sweet nothings to the avocado</button>
+
+                <label for="freshness-level" class="visuallyhidden">Nap time in the fridge</label>
+                <button class="freshnessLevel" id="freshness-level">Nap time in the fridge</button>                
             </div>
             <!-- Game buttons end -->
-        </div>
+        </section>
         <!-- Game container end -->
 
     </div>
