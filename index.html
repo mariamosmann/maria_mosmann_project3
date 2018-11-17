@@ -10,26 +10,33 @@
     <meta name="description" content="NeoPits - Virtual Petvocado">
     <link type="image/png" href="assets/favicon.png" rel="icon">
     <link rel="apple-touch-icon" href="assets/apple-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    
-    <!-- Game starts -->
-    <div class="game-wrapper">
+<body class="game">
+    <!-- SKIP CONTENT START -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- SKIP CONTENT END -->
 
-        <!-- Game header start -->
-        <header class="game-header">
-            <h1 class="game-title">NeoPits</h1>
 
-            <h2 class="game-subtitle">Virtual Petvocado</h2>
-
+    <!-- Game header start -->
+    <header class="header">
+        <div class="game-wrapper">
+            <h1 class="header-title">NeoPits</h1>
+        
+            <h2 class="header-subtitle">Virtual Petvocado</h2>
+        
             <label for="reset" class="visuallyhidden">Reset Game</label>
             <button class="reset" id="reset">Reset Game</button>
-        </header>
-        <!-- Game header end -->
+        </div>
+    </header>
+    <!-- Game header end -->
+    
+    <!-- Game starts -->
+    <div class="game-wrapper">   
 
         <!-- Game instructions start -->
-        <section class="game-instructions">
+        <section class="game-instructions" id="main-content">
             <h3 class="game-instructions-heading">Game Instructions</h3>
 
             <p class="game-instructions-text">You have a taco party in 5 days and you'll bring the guacamole! Yay! ...But... the market only had the One Green Avocado to Unripe Them All! What are we going to do?!!!</p>

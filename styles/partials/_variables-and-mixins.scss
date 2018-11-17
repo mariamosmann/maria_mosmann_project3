@@ -1,0 +1,18 @@
+$text: #080708;
+$background: #f0f7ee;
+$color: #ffd026;
+
+$font-size: 20;
+$font-family: 'Raleway', sans-serif;
+$font-family-secondary: 'Baloo', cursive;
+
+@mixin heading($font-size-heading) { 
+    font-size: ($font-size-heading / 10) * 1rem; 
+    font-family: $font-family-secondary;    
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 0;
+    line-height: $font-size-heading + 20px;
+}

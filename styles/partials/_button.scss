@@ -1,0 +1,36 @@
+// Jenny said I could use camelCase for these button classes as my JS code depends on these classes matching key-value pairs in an object. The same apply for some images inside my assets folder, as they all use the same variable.
+
+.reset,
+.shynessLevel,
+.friendshipLevel,
+.affectionLevel,
+.freshnessLevel {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: $color;
+    border: 3px solid $text;
+    margin: 5px auto;
+    display: block;
+    padding: 5px 10px;
+    width: 50%;
+    font-weight: 700;
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+        background: $text;
+        color: $color;
+    }
+}
+
+.reset {
+    width: 150px;
+    background: $text;
+    color: $color;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    &:hover {
+        background: $background;
+        color: $text;
+    }
+}

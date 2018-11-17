@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;       
+}
+
+body {
+    font-size: ($font-size / 10) * 1rem;    
+    font-family: $font-family;
+    color: $text;  
+    font-weight: 400;
+}
+
+a {
+    color: $text;    
+    text-decoration: none;   
+    padding: 0 10px;
+    display: block;       
+}
