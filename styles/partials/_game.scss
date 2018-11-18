@@ -1,8 +1,30 @@
-.game {
-    background: $background;
-    &-wrapper {
+.game {    
+    width: 65%;
+    &-screen {
+        border: 3px solid $text;
         width: 90%;
+        margin: 30px auto 0 auto;
+        &-result {
+            border: 3px solid $text;
+            width: 90%;
+            margin: 30px auto 0 auto;
+        }
+    }
+    &-text-display {
+        font-weight: 700;
+        padding: 10px 20px;
+        text-align: center;
+        background: $color;
+        border-bottom: 3px solid $text;
+    }
+    &-image-container {
+        padding: 15px;
+    }
+    &-image {
         margin: 0 auto;
-        position: relative;
+    }
+    &-buttons {
+        width: 90%;
+        margin: 0 auto 30px auto;
     }
 }

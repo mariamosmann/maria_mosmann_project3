@@ -1,0 +1,11 @@
+.content {
+    background: $background;
+    &-wrapper {
+        width: 80%;
+        margin: 0 auto; 
+        &-flex {
+            display: flex;
+            padding: 100px 0;
+        }       
+    }
+}

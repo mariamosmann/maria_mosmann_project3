@@ -150,8 +150,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  background: #ffd026;
-  color: #080708;
+  background: #080708;
+  color: #f0f7ee;
+  font-weight: 700;
   padding: 10px;
   border: 2px solid #080708; }
 
@@ -167,18 +168,33 @@ body {
   color: #080708;
   font-weight: 400; }
 
+p {
+  line-height: 28px;
+  margin: 0;
+  padding: 0; }
+
 a {
   color: #080708;
   text-decoration: none;
   padding: 0 10px;
   display: block; }
 
-.game {
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.content {
   background: #f0f7ee; }
-  .game-wrapper {
-    width: 90%;
-    margin: 0 auto;
-    position: relative; }
+  .content-wrapper {
+    width: 80%;
+    margin: 0 auto; }
+    .content-wrapper-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 100px 0; }
 
 .reset,
 .shynessLevel,
@@ -193,11 +209,11 @@ a {
   margin: 5px auto;
   display: block;
   padding: 5px 10px;
-  width: 50%;
+  width: 100%;
   font-weight: 700;
-  -webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
-  -o-transition: background 300ms ease-in-out, color 300ms ease-in-out;
-  transition: background 300ms ease-in-out, color 300ms ease-in-out; }
+  -webkit-transition: background 400ms ease-in-out, color 400ms ease-in-out;
+  -o-transition: background 400ms ease-in-out, color 400ms ease-in-out;
+  transition: background 400ms ease-in-out, color 400ms ease-in-out; }
   .reset:hover,
   .shynessLevel:hover,
   .friendshipLevel:hover,
@@ -210,32 +226,70 @@ a {
   width: 150px;
   background: #080708;
   color: #ffd026;
-  position: absolute;
-  bottom: 5%;
-  right: 0; }
+  margin-top: 30px; }
   .reset:hover {
-    background: #f0f7ee;
+    background: #ffd026;
     color: #080708; }
 
 .header {
-  background: #ffd026; }
+  background: #ffd026;
+  padding: 50px 0; }
   .header-title {
-    font-size: 10rem;
+    font-size: 12rem;
     font-family: "Baloo", cursive;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: lowercase;
     margin: 0;
     padding: 0;
-    line-height: 120px;
-    padding: 20px 0;
+    line-height: 140px;
     text-shadow: 5px 5px 10px #f0f7ee, -5px -5px 10px #f0f7ee, -5px 5px 10px #f0f7ee, 5px -5px 10px #f0f7ee; }
   .header-subtitle {
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: "Baloo", cursive;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: lowercase;
     margin: 0;
     padding: 0;
-    line-height: 60px; }
+    line-height: 70px; }
+
+.instructions {
+  padding: 30px 0;
+  width: 35%; }
+  .instructions-heading {
+    font-size: 3rem;
+    font-family: "Baloo", cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    margin: 0;
+    padding: 0;
+    line-height: 50px; }
+  .instructions-text {
+    text-align: justify;
+    margin: 15px 0; }
+
+.game {
+  width: 65%; }
+  .game-screen {
+    border: 3px solid #080708;
+    width: 90%;
+    margin: 30px auto 0 auto; }
+    .game-screen-result {
+      border: 3px solid #080708;
+      width: 90%;
+      margin: 30px auto 0 auto; }
+  .game-text-display {
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+    background: #ffd026;
+    border-bottom: 3px solid #080708; }
+  .game-image-container {
+    padding: 15px; }
+  .game-image {
+    margin: 0 auto; }
+  .game-buttons {
+    width: 90%;
+    margin: 0 auto 30px auto; }

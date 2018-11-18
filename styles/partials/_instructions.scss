@@ -1,0 +1,11 @@
+.instructions {    
+    padding: 30px 0;
+    width: 35%;
+    &-heading {
+        @include heading(30);
+    }
+    &-text {
+        text-align: justify;
+        margin: 15px 0;
+    }
+}

@@ -9,9 +9,22 @@ body {
     font-weight: 400;
 }
 
+p {
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     color: $text;    
     text-decoration: none;   
     padding: 0 10px;
     display: block;       
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;    
 }

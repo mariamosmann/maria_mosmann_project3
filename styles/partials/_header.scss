@@ -1,11 +1,11 @@
 .header {
-    background: $color;    
+    background: $color;
+    padding: 50px 0;   
     &-title {
-        @include heading(100);
-        padding: 20px 0;
+        @include heading(120);        
         text-shadow: 5px 5px 10px $background, -5px -5px 10px $background, -5px 5px 10px $background, 5px -5px 10px $background;
     }
     &-subtitle {
-        @include heading(40);        
+        @include heading(50);        
     }
 }
