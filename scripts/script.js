@@ -70,8 +70,6 @@ avocado.game = function () {
         
         //show results if counter = 5
         if (avocado.counterLevel == 5) {
-            //change div class (so I can style it as needed)
-            $(".game-screen").attr("class", "game-screen-result");
 
             //check for results
             if (avocado.level.shynessLevel == 1 && avocado.level.friendshipLevel == 0 && avocado.level.affectionLevel == 3 && avocado.level.freshnessLevel == 1) {

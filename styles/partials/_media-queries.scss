@@ -1,0 +1,97 @@
+/* Landscape tablet and laptops*/
+@media (max-width: 1280px) {
+    .content {
+        &-wrapper {
+            width: 85%;
+            margin: 0 auto;
+            &-flex {
+                padding: 75px 0;
+            }     
+        }
+    }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .content {
+        &-wrapper {
+            width: 90%;
+            &-flex {
+                display: block;
+                padding: 30px 0;
+            }       
+        }
+    }
+
+    .instructions {    
+        width: 100%;
+    }
+
+    .game {    
+        width: 100%;
+        &-screen {
+            width: 100%;
+        }
+        &-buttons {
+            width: 100%;
+        }
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 70%;       
+    }
+
+    .header {
+        &-title {
+            font-size: 10rem;
+        }
+        &-subtitle {
+            font-size: 4rem;     
+        }
+    }    
+
+    .reset {
+        width: 180px;
+    }
+}
+
+/* Landscape phones */
+@media (max-width: 480px) {
+    html {
+        font-size: 75%;       
+    }
+
+    .header {
+        &-title {
+            font-size: 8rem;
+            text-align: center;
+        }
+        &-subtitle {
+            font-size: 2.4rem;
+            text-align: center;     
+        }
+    } 
+
+    .content {
+        &-wrapper {
+            &-flex {
+                padding: 0;
+            }       
+        }
+    }
+}
+
+/* portrait phones to landscape phones  */
+@media (max-width: 400px) {
+    .header {
+        &-title {
+            font-size: 6rem;
+        }
+        &-subtitle {
+            font-size: 2rem;  
+        }
+    }
+}
