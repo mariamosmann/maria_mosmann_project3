@@ -332,22 +332,14 @@ img {
     font-size: 8rem;
     text-align: center; }
   .header-subtitle {
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-align: center; }
   .content-wrapper-flex {
-    padding: 0; }
-  .instructions-heading {
-    font-size: 2.4rem; }
-  .instructions-text {
-    font-size: 1.6rem; }
-  .reset,
-  .shynessLevel,
-  .friendshipLevel,
-  .affectionLevel,
-  .freshnessLevel {
-    font-size: 1.6rem; } }
+    padding: 0; } }
 
 /* portrait phones to landscape phones  */
 @media (max-width: 400px) {
   .header-title {
-    font-size: 6rem; } }
+    font-size: 6rem; }
+  .header-subtitle {
+    font-size: 2rem; } }

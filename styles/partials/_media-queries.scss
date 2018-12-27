@@ -70,7 +70,7 @@
             text-align: center;
         }
         &-subtitle {
-            font-size: 2rem;
+            font-size: 2.4rem;
             text-align: center;     
         }
     } 
@@ -82,23 +82,6 @@
             }       
         }
     }
-
-    .instructions {    
-        &-heading {
-            font-size: 2.4rem;
-        }
-        &-text {
-            font-size: 1.6rem;
-        }
-    }
-
-    .reset,
-    .shynessLevel,
-    .friendshipLevel,
-    .affectionLevel,
-    .freshnessLevel {
-        font-size: 1.6rem;
-    }
 }
 
 /* portrait phones to landscape phones  */
@@ -106,6 +89,9 @@
     .header {
         &-title {
             font-size: 6rem;
+        }
+        &-subtitle {
+            font-size: 2rem;  
         }
     }
 }
